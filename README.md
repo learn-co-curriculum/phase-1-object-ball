@@ -186,7 +186,7 @@ attaches a JavaScript file. Chrome will execute the JavaScript and we can open
 Chrome's dev tools to debug our program.
 
 ```html
-<h1>JavaScript Objectball</h1>
+<h2>JavaScript Objectball</h2>
 <p>
   Open your Chrome dev tools to see console output and trigger the debugger to
   catch.
