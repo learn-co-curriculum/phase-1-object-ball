@@ -12,7 +12,7 @@ volunteered to keep stats at the game.
 
 Fork and clone this lab and open the `index.html` file in the browser. You'll be
 coding your solution in `src/00-objectball.js`. There are no tests for this lab
-&mdash; you'll need to use the browser's developer tools to check your work.
+— you'll need to use the browser's developer tools to check your work.
 There are instructions throughout this lesson on how to use `console.log` and
 debugger to test your code, so let's get started!
 
