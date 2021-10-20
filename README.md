@@ -131,7 +131,7 @@ results from functions into variables because it makes it easier to debug our
 programs later. One-liners are not always better!
 
 ```js
-function homeTeamName()
+function homeTeamName(){
   return gameObject()['home']['teamName']
 }
 
