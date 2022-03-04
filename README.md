@@ -196,8 +196,22 @@ Chrome's dev tools to debug our program.
 <script src="./src/01-simple-debug.js"></script>
 ```
 
-We can include the `debugger` keyword to stop our program and inspect it with
-Chrome's dev tools. Notice, the program will only ever stop if we have the
+Open up the `01-simple-debug.js` file in the `src` folder and
+check out its content.
+We'll be debugging this file in the Chrome debugger.
+
+We can include the `debugger` keyword to stop our program and
+inspect it with Chrome's dev tools.
+
+Follow these steps to start the debugger:
+
+- Open the `index.html` file.
+- Press F12 to open the dev tools panel.
+- Refresh the page with the dev tools panel open
+(press `CMD + R` on a Mac or `CTRL + R`
+on Windows or Linux to refresh).
+
+Notice, the program will only ever stop if we have the
 dev tools open.
 
 ```js
