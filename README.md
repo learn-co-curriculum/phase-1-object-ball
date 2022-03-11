@@ -111,7 +111,7 @@ from the `gameObject` function. Each function will call the `gameObject`
 function and then return properties accessed off it.
 
 For example, let's say we want to build a function, `homeTeamName`, that returns
-the name of the home team, `"Brooklyn Nets"`. We can call the `gameHash`
+the name of the home team, `"Brooklyn Nets"`. We can call the `gameObject`
 function inside of our `homeTeamName` function and operate on the object:
 
 ```js
