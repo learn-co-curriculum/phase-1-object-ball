@@ -392,9 +392,3 @@ Define functions to return the answer to the following questions:
 
 1. Write a function that returns true if the player with the longest name had
    the most steals. Call the function `doesLongNameStealATon`.
-
-### Walkthrough Video
-
-Once you've finished your work, check out this
-[walkthrough video](https://www.youtube.com/watch?v=HfNBr1q1D9w) for an
-explanation.
