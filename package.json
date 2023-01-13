@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/learn-co-curriculum/phase-1-object-ball.git"
+    "url": "git+ssh://github.com/learn-co-curriculum/phase-1-object-ball.git"
   },
   "keywords": [
     "flatiron school",
@@ -26,5 +26,11 @@
   "bugs": {
     "url": "https://github.com/learn-co-curriculum/phase-1-object-ball/issues"
   },
-  "homepage": "https://github.com/learn-co-curriculum/phase-1-object-ball#readme"
+  "homepage": "https://github.com/learn-co-curriculum/phase-1-object-ball#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "jsdom": "^9.0",
+    "mocha": "5.2.0",
+    "mocha-jsdom": "~1.1.0"
+  }
 }
