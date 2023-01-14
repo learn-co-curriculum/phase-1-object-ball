@@ -14,12 +14,14 @@ Fork and clone this lab and open the `index.html` file in the browser. You'll be
 coding your solution in `src/00-objectball.js`. There are no tests for this lab
 — you'll need to use the browser's developer tools to check your work. There are
 instructions throughout this lesson on how to use `console.log` and debugger to
-test your code, so let's get started!
+test your code.
 
 Once you're done, be sure to commit and push your code up to GitHub, then submit
 the assignment using CodeGrade. Even though this bonus lab does not have tests,
-it must be submitted through CodeGrade in order to be marked as complete in
-Canvas.
+it must still be submitted through CodeGrade in order to be marked as complete
+in Canvas.
+
+Let's get started!
 
 ### Part 1: Building the Object
 
