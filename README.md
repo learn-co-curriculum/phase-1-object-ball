@@ -12,9 +12,14 @@ volunteered to keep stats at the game.
 
 Fork and clone this lab and open the `index.html` file in the browser. You'll be
 coding your solution in `src/00-objectball.js`. There are no tests for this lab
-— you'll need to use the browser's developer tools to check your work.
-There are instructions throughout this lesson on how to use `console.log` and
-debugger to test your code, so let's get started!
+— you'll need to use the browser's developer tools to check your work. There are
+instructions throughout this lesson on how to use `console.log` and debugger to
+test your code, so let's get started!
+
+Once you're done, be sure to commit and push your code up to GitHub, then submit
+the assignment using CodeGrade. Even though this bonus lab does not have tests,
+it must be submitted through CodeGrade in order to be marked as complete in
+Canvas.
 
 ### Part 1: Building the Object
 
@@ -116,11 +121,11 @@ function inside of our `homeTeamName` function and operate on the object:
 
 ```js
 function homeTeamName() {
-  let object = gameObject()
-  return object['home']['teamName']
+  let object = gameObject();
+  return object["home"]["teamName"];
 }
 
-console.log(homeTeamName())
+console.log(homeTeamName());
 // logs "Brooklyn Nets"
 ```
 
@@ -131,11 +136,11 @@ results from functions into variables because it makes it easier to debug our
 programs later. One-liners are not always better!
 
 ```js
-function homeTeamName(){
-  return gameObject()['home']['teamName']
+function homeTeamName() {
+  return gameObject()["home"]["teamName"];
 }
 
-console.log(homeTeamName())
+console.log(homeTeamName());
 // logs "Brooklyn Nets"
 ```
 
@@ -196,23 +201,20 @@ Chrome's dev tools to debug our program.
 <script src="./src/01-simple-debug.js"></script>
 ```
 
-Open up the `01-simple-debug.js` file in the `src` folder and
-check out its content.
-We'll be debugging this file in the Chrome debugger.
+Open up the `01-simple-debug.js` file in the `src` folder and check out its
+content. We'll be debugging this file in the Chrome debugger.
 
-We can include the `debugger` keyword to stop our program and
-inspect it with Chrome's dev tools.
+We can include the `debugger` keyword to stop our program and inspect it with
+Chrome's dev tools.
 
 Follow these steps to start the debugger:
 
 - Open the `index.html` file.
 - Press F12 to open the dev tools panel.
-- Refresh the page with the dev tools panel open
-(press `CMD + R` on a Mac or `CTRL + R`
-on Windows or Linux to refresh).
+- Refresh the page with the dev tools panel open (press `CMD + R` on a Mac or
+  `CTRL + R` on Windows or Linux to refresh).
 
-Notice, the program will only ever stop if we have the
-dev tools open.
+Notice, the program will only ever stop if we have the dev tools open.
 
 ```js
 // dev tools must be open for the debugger to trigger
@@ -272,7 +274,8 @@ for (let key in oo) {
   or entries:
   - `Object.keys(oo)` returns an array of all keys
   - `Object.values(oo)` returns an array of all values
-  - `Object.entries(oo)` returns an array of arrays containing `[key, value]` together
+  - `Object.entries(oo)` returns an array of arrays containing `[key, value]`
+    together
 
 ```js
 let oo = { foo: 42, bar: 83, baz: 79 };
@@ -327,11 +330,10 @@ function goodPractices() {
 ```
 
 Play around with the debug tools around each `debugger` keyword until you get
-comfortable with the iteration. This should give you a stronger sense of how
-we iterate through so many levels of a nested object and what happens on each
+comfortable with the iteration. This should give you a stronger sense of how we
+iterate through so many levels of a nested object and what happens on each
 level. **Use this strategy of placing LOTS of `debugger` keywords when you
-iterate over things in order to investigate your program and solve this
-lab.**
+iterate over things in order to investigate your program and solve this lab.**
 
 Okay, _now_ we're ready to build out functions:
 
@@ -373,12 +375,12 @@ playerStats("Alan Anderson")
 ```
 
 - Build a function, `bigShoeRebounds`, that will return the number of rebounds
-  associated with the player that has the largest shoe size. Break this one
-  down into steps:
+  associated with the player that has the largest shoe size. Break this one down
+  into steps:
   - First, find the player with the largest shoe size
   - Then, return that player's number of rebounds
-  - Remember to think about return values here. Use `debugger` to drop into
-    your function and understand what it is returning and why.
+  - Remember to think about return values here. Use `debugger` to drop into your
+    function and understand what it is returning and why.
 
 ### Bonus Questions
 
