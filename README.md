@@ -26,7 +26,7 @@ Let's get started!
 ### Part 1: Building the Object
 
 The first function you will define is called `gameObject`. This function
-contains and returns a object nested in the following manner:
+contains and returns an object nested in the following manner:
 
 - The top level of the object has two keys: `"home"`, for the home team, and
   `"away"`, for the away team.
@@ -38,7 +38,7 @@ contains and returns a object nested in the following manner:
 - The `teamName` key points to a string of the team name.
 - The `colors` key points to an array of strings that are that team's colors.
 - The `players` key points to an object of players whose names (as strings) are
-  the keys to a object containing their stats. The values for each player's
+  the keys to an object containing their stats. The values for each player's
   names and their stats can be found in the table below. The stats keys should
   be formatted like this:
   - `"number"`
@@ -356,9 +356,9 @@ Okay, _now_ we're ready to build out functions:
 - Build a function, `teamNames`, that operates on the game object to return an
   array of the team names.
 - Build a function, `playerNumbers`, that takes in an argument of a team name
-  and returns an array of the jersey number's for that team.
+  and returns an array of the jersey numbers for that team.
 - Build a function, `playerStats`, that takes in an argument of a player's name
-  and returns a object of that player's stats. Check out the following example
+  and returns an object of that player's stats. Check out the following example
   of the expected return value of the `playerStats` function:
 
 ```js
