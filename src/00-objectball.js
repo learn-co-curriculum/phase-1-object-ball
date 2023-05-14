@@ -117,4 +117,21 @@ function gameObject(){
     }
 }
 
-console.log(gameObject()["home"]["players"]["Alan Anderson"])
+function numPointsScored(playerName){
+    const player = gameObject()["home"]["players"][playerName];
+    return (typeof player === "object") ? player["points"] : gameObject()["away"]["players"][playerName]["points"];
+}
+
+console.log(numPointsScored("Alan Anderson"))
+//22
+console.log(numPointsScored("Jeff Adrien"))
+//10
+function shoeSize(){}
+
+function teamColors(){}
+
+function teamNames(){}
+
+function playerNumbers(){}
+
+function playerStats(){}
