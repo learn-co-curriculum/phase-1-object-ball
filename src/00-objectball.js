@@ -122,4 +122,10 @@ function homeTeamName(){
     return object["home"]["teamName"];
 }
 
-console.log(homeTeamName())
+function numPointsScored() {
+    let object = gameObject();
+    return object.teams.players.points
+
+}
+
+
