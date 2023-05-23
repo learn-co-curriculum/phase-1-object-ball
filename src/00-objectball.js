@@ -122,15 +122,28 @@ function numPointsScored(playerName){
     return (typeof player === "object") ? player["points"] : gameObject()["away"]["players"][playerName]["points"];
 }
 
-console.log(numPointsScored("Alan Anderson"))
-//22
-console.log(numPointsScored("Jeff Adrien"))
-//10
-function shoeSize(){}
+// console.log(numPointsScored("Alan Anderson"))
+// //22
+// console.log(numPointsScored("Jeff Adrien"))
+// //10
+function shoeSize(playerName){
+    const player = gameObject()["home"]["players"][playerName];
+    return (typeof player === "object") ? player["shoe"] : gameObject()["away"]["players"][playerName]["shoe"];
+}
+// console.log(shoeSize("Alan Anderson"))
+// //16
+// console.log(shoeSize("Jeff Adrien"))
+// //18
 
-function teamColors(){}
+function teamColors(team){
+    return gameObject()["home"]["teamName"] === team ? gameObject()["home"]["colors"] : gameObject()["away"]["colors"];
+}
+// console.log(teamColors("Charlotte Hornets"));
 
-function teamNames(){}
+function teamNames(){
+    return [gameObject().home["teamName"], gameObject().away["teamName"]]
+}
+// console.log(teamNames())
 
 function playerNumbers(){}
 
