@@ -116,10 +116,12 @@ function gameObject(){
         }
     }
 }
+const teams = gameObject();
 
 function numPointsScored(playerName){
-    const player = gameObject().home.players[playerName];
-    return (typeof player === "object") ? player.points : gameObject().away.players[playerName].points;
+    
+    const player = teams["home"]["players"][playerName];
+    return (typeof player === "object") ? player["points"] : teams["away"]["players"][playerName]["points"];
 }
 
 // console.log(numPointsScored("Alan Anderson"))
@@ -127,8 +129,8 @@ function numPointsScored(playerName){
 // console.log(numPointsScored("Jeff Adrien"))
 // //10
 function shoeSize(playerName){
-    const player = gameObject().home.players[playerName];
-    return (typeof player === "object") ? player.shoe : gameObject().away.players[playerName].shoe;
+    const player = teams["home"]["players"][playerName];
+    return (typeof player === "object") ? player["shoe"] : teams["away"]["players"][playerName]["shoe"];
 }
 // console.log(shoeSize("Alan Anderson"))
 // //16
@@ -136,28 +138,49 @@ function shoeSize(playerName){
 // //18
 
 function teamColors(team){
-    return gameObject()["home"]["teamName"] === team ? gameObject()["home"]["colors"] : gameObject()["away"]["colors"];
+    return teams["home"]["teamName"] === team ? teams["home"]["colors"] : gameObject()["away"]["colors"];
 }
 // console.log(teamColors("Charlotte Hornets"));
 
 function teamNames(){
-    return [gameObject().home["teamName"], gameObject().away["teamName"]]
+    return [teams.home["teamName"], teams.away["teamName"]]
 }
 // console.log(teamNames())
 
 function playerNumbers(team){
-    const players = gameObject()["home"]["teamName"] === team ? gameObject()["home"]["players"] : gameObject()["away"]["players"];
-    const playersArr = [];     
-    for(const player in players){         
-        playersArr.push(players[player].number);     
-    }     
-    return playersArr; 
-} 
+    const players = teams["home"]["teamName"] === team ? teams["home"]["players"] : teams["away"]["players"];
+    console.log(players)
+    const playersArr = [];
+    for(const player in players){
+        playersArr.push(players[player].number);
+    }
+    return playersArr;
+}
 // console.log(playerNumbers("Charlotte Hornets"))
 
-
 function playerStats(playerName){
-    const player = gameObject().home.players[playerName];
-    return (typeof player === "object") ? player : gameObject().away.players[playerName];
+    const player = teams.home.players[playerName];
+    return (typeof player === "object") ? player : teams.away.players[playerName];
 }
-console.log(playerStats("Alan Anderson"));
+// console.log(playerStats("Alan Anderson"));
+
+function bigShoeRebounds(){
+    let biggestShoe = 0;
+    let bigShoeRebounds = 0;
+    for(const p in teams.home.players){
+        let player = teams.home.players[p];
+        if(player.shoe > biggestShoe){
+            biggestShoe = player.shoe;
+            bigShoeRebounds = player.rebounds;
+        }
+    }
+    for(const p in teams.away.players){
+        let player = teams.away.players[p];
+        if(player.shoe > biggestShoe){
+            biggestShoe = player.shoe;
+            bigShoeRebounds = player.rebounds;
+        }
+    }
+    return bigShoeRebounds;
+}
+console.log(bigShoeRebounds());
