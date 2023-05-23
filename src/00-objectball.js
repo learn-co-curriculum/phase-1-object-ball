@@ -69,7 +69,7 @@ function gameObject() {
                     steals: 2,
                     blocks: 7,
                     slamDunks:2
-                }
+                },
                 bismakBiyombo: {
                     number: 0,
                     shoe: 16,
@@ -79,7 +79,7 @@ function gameObject() {
                     steals: 7,
                     blocks: 15,
                     slamDunks: 10
-                }
+                },
                 desagnaDiop: {
                     number: 2,
                     shoe: 14,
@@ -89,7 +89,7 @@ function gameObject() {
                     steals: 4,
                     blocks: 5,
                     slamDunks: 5
-                }
+                },
                 benGordon: {
                     number: 8,
                     shoe: 15,
@@ -99,7 +99,7 @@ function gameObject() {
                     steals: 1,
                     blocks: 1,
                     slamDunks: 0
-                }
+                },
                 brendanHaywood: {
                     numnber: 33,
                     shoe: 15,
@@ -113,3 +113,13 @@ function gameObject() {
             }
         }
     }
+    return teams
+}
+
+
+function homeTeamName(){
+    let object = gameObject();
+    return object["home"]["teamName"];
+}
+
+console.log(homeTeamName())
