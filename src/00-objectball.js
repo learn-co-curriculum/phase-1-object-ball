@@ -115,15 +115,12 @@ function gameObject() {
     }
     return stats;
 }
-//console.log(gameObject());
 
 // home team name
 function homeTeamName() {
     let object = gameObject();
     return object["home"]["teamName"];
   }
-
-// console.log(homeTeamName());
 
 // pts scored for player
 function numPointsScored(name) {
@@ -151,8 +148,23 @@ function shoeSize(name) {
     return name;
 }
 
-// testing
-console.log(numPointsScored("Brendan Haywood"));
-console.log(shoeSize("Brendan Haywood"));
+// team colors
+function teamColors(name) {
+    let object = gameObject();
+    if (name === object["home"]["teamName"]) {
+        return object["home"]["colors"];
+    } else {
+        return object["away"]["colors"];
+    }
+}
+ 
 
+
+// testing
+//console.log(gameObject());
+// console.log(homeTeamName());
+// console.log(numPointsScored("Brendan Haywood"));
+// console.log(shoeSize("Brendan Haywood"));
+// console.log(teamColors("Brooklyn Nets"));
+// console.log(teamColors("Charlotte Hornets"));
 
