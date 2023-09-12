@@ -123,7 +123,7 @@ function homeTeamName() {
     return object["home"]["teamName"];
   }
 
-console.log(homeTeamName());
+// console.log(homeTeamName());
 
 // pts scored for player
 function numPointsScored(name) {
@@ -138,5 +138,21 @@ function numPointsScored(name) {
     return name;
 }
 
+// shoe size
+function shoeSize(name) {
+    let object = gameObject();
+    for (namePlayer in object["home"]["players"]) {
+        if (name === namePlayer) {
+            return object["home"]["players"][name]["shoe"];
+        } else {
+            return object["away"]["players"][name]["shoe"];
+        }
+    }
+    return name;
+}
+
 // testing
 console.log(numPointsScored("Brendan Haywood"));
+console.log(shoeSize("Brendan Haywood"));
+
+
