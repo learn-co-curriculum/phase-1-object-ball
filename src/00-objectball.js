@@ -1,1 +1,1 @@
-function gameObject() {}
+function gameObject() { }
