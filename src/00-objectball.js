@@ -115,5 +115,28 @@ function gameObject() {
     }
     return stats;
 }
+//console.log(gameObject());
 
-console.log(gameObject());
+// home team name
+function homeTeamName() {
+    let object = gameObject();
+    return object["home"]["teamName"];
+  }
+
+console.log(homeTeamName());
+
+// pts scored for player
+function numPointsScored(name) {
+    let object = gameObject();
+    for (namePlayer in object["home"]["players"]) {
+        if (name === namePlayer) {
+            return object["home"]["players"][name]["points"];
+        } else {
+            return object["away"]["players"][name]["points"];
+        }
+    }
+    return name;
+}
+
+// testing
+console.log(numPointsScored("Brendan Haywood"));
